@@ -60,4 +60,4 @@ To create an app for the project
  ```
 
 ## Configuring the app to our project
-Open settings.py in the project folder in the project directory and add the app_name as a list item in the INSTALLED_APPS.
+Open `settings.py` in the project folder in the project directory and add the app_name as a list item in the INSTALLED_APPS.
