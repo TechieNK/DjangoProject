@@ -23,10 +23,9 @@ In the above function, the function returns the string. And in the `urlspattern`
     path('',home),
     path('about/',contact)
   ```
-```
+
 Note: In the above example, the first path is used for the home page(base url), Django triggers the function home and the 
 home function return the string `Home page`. The second path is when the user adds `about/` to the base URL, Django triggers
 the function contact and the contact function return the string `Contact page`.
 
-```
 We can also make the function to return API data like a JSON response and the HTTP response.
