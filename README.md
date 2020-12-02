@@ -12,13 +12,13 @@ To use the function:
     from django.http import HttpResponse
   ```
 and define the function, like 
-  ```
+  ```  
     def home(request):
       return HttpResponse("Home page")
     def contact(request):
       return HttpResponse("Contact page")
   ```
-In the above function, the function returns the string. And in the `urlspattern` we need to create a path and and call the function.
+We can also make the function to return API data like a JSON response and the HTTP response.  In the above function, the function returns the string. And in the `urlspattern` we need to create a path and and call the function.
   ```
     path('',home),
     path('about/',contact)
@@ -28,4 +28,13 @@ Note: In the above example, the first path is used for the home page(base url), 
 home function return the string `Home page`. The second path is when the user adds `about/` to the base URL, Django triggers
 the function contact and the contact function return the string `Contact page`.
 
-We can also make the function to return API data like a JSON response and the HTTP response.
+## Using URLs and views
+We can return the template to the user using URL and views. We need to create a file named `urls.py` in the app we created. And add :
+  ```
+    from django.urls import path
+  ```
+In the `views.py` file present in the base folder, we need to add
+  ```
+    from django.http import HttpResponse
+  ```
+and define the functions which is required to return the template to the user in that file. 
