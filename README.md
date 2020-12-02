@@ -21,10 +21,12 @@ and define the function, like
 In the above function, the function returns the string. And in the `urlspattern` we need to create a path and and call the function.
   ```
     path('',home),
-    path('about/',contacts)
+    path('about/',contact)
   ```
 ```
-Note: In the above example, the first path is used for the home page and the home variable is used to call the function we defined. The second path is when the user enters the
+Note: In the above example, the first path is used for the home page(base url), Django triggers the function home and the 
+home function return the string `Home page`. The second path is when the user adds `about/` to the base URL, Django triggers
+the function contact and the contact function return the string `Contact page`.
 
 ```
 We can also make the function to return API data like a JSON response and the HTTP response.
