@@ -29,16 +29,13 @@ home function return the string `Home page`. The second path is when the user ad
 the function contact and the contact function return the string `Contact page`.
 
 ## Using URLs and views
-We can return the template to the user using URL and views. We need to create a file named `urls.py` in the app we created. Basically, whenever some one types in the base URL, we are going to send them to this URL file and this file handles all those processing necessary. For that, we need to import the path and views and we need to urlspattern list.
-  ```
-    from django.urls import path
-    from . import views
-  ```
+We can return the template to the user using URL and views. We need to create a file named `urls.py` in the app we created. Basically, whenever some one types in the base URL, we are going to send them to this URL file and this file handles all those processing necessary. For that, we need to import the path and views and we need to add the urlspattern list.
 In the `views.py` file present in the base folder, we need to add
   ```
     from django.http import HttpResponse
   ```
-and define the functions which is required to return the template to the user in that file.  
-
-
-Now, in the path of each URL in the app `urls.py` file, we need to call the necessary functions to return the template to the user. 
+and define the functions which is required to return the template to the user in that file. Now, in the path of each URL in the app `urls.py` file, we need to call the necessary functions from the `views.py` to return the template to the user. Also, in the base `urls.py` file, we need to import `include` and add a path in the urlspattern to call the app `urls.py` file.
+  ```
+    path('',include('accounts.urls'))
+  ```
+In the above case, `accounts` is the name of the app we created.
