@@ -11,7 +11,7 @@ To use the function:
   ```
     from django.http import HttpResponse
   ```
-and define the function. Like 
+and define the function, like 
   ```
     def home(request):
       return HttpResponse("Home page")
@@ -23,5 +23,8 @@ In the above function, the function returns the string. And in the `urlspattern`
     path('',home),
     path('about/',contacts)
   ```
+```
+Note: In the above example, the first path is used for the home page and the home variable is used to call the function we defined. The second path is when the user enters the
 
+```
 We can also make the function to return API data like a JSON response and the HTTP response.
