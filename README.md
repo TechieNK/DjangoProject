@@ -10,4 +10,4 @@ Our templates needs to be stored in app_folder-> templates-> app_name-> template
   def home(request):
     return render(request, 'accounts/dashboard.html')
   ```
-Here, accounts is the name of the directory in templates directory where our templates are present.
+Here, accounts is the name of the directory in templates directory where our templates are present. When lot of templates needs to used, we could get a lot of redundant code. So, to solve this issue, we can create a base template
