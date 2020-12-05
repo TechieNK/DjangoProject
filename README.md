@@ -10,7 +10,7 @@ Our templates needs to be stored in app_folder-> templates-> app_name-> template
   def home(request):
     return render(request, 'accounts/dashboard.html')
   ```
-Here, accounts is the name of the directory in templates directory where our templates are present. When lot of templates needs to used, we could get a lot of redundant code. So, to solve this issue, we can create a base template (main.html). In the base template, we can create our header and footer, so we don't want to repeat the code. Block tages are used for making the page more dynamic. 
+Here, `accounts` is the name of the directory in templates directory where templates are present and `dashboard.html` is our template . When lot of templates needs to used, we could get a lot of redundant code. So, to solve this issue, we can create a base template (main.html). In the base template, we can create our header and footer, so we don't want to repeat the code. Block tages are used for making the page more dynamic. 
   ```
     {% block content %}
     
@@ -26,4 +26,4 @@ templates, create new templates, add the code and include it in the base templat
   ```
   {% include 'path_of_template' %}
   ```
-We can add our css and javascript code in the base template and only html code in the other template(header, footer, etc...). 
+We can also have our css and javascript code in the base template and only html code in the other template(header, footer, etc...). 
