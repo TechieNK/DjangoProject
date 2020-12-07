@@ -1,5 +1,5 @@
 # DjangoProject
-## Day-3 
+## Day-3 Hello
 
 ## Templates
 A template is a text file. It can generate any text-based format (HTML, XML, CSV, etc.).
