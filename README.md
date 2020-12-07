@@ -1,4 +1,2 @@
 # DjangoProject
-## Day-6 
-
-
+## Day-7
