@@ -27,3 +27,7 @@ Superuser created successfully.
 Now you have created an admin user, you’re ready to use the Django admin. Let’s start the development server and explore.
 
 First, make sure the development server is running, then open a web browser to http://127.0.0.1:8000/admin/. Log in with the superuser account you created. At the top of the index page is the Authentication and Authorization group with two types of editable content: Groups and Users. They are provided by the authentication framework included in Django. We will look at users and groups later in the chapter.
+
+
+
+# Not Completed
