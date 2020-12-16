@@ -1,6 +1,6 @@
 # DjangoProject
 ## Day-4 
-
+## Static Files & Images
 Websites generally need to serve additional files such as images, JavaScript, or CSS. In Django, we refer to these files as “static files”. When you have a lot a code, it's a lot better to have one centralized area to store our CSS, JavaScript, or images. First, create a directory called `static` in your project directory and inside `static` directory create respective folders for CSS, JavaScript, and images. Django will look for static files there, similarly to how Django finds templates.
 
 Open the settings.py file inside the inner djangotemplates folder. At the very bottom of the file you should see these lines:
