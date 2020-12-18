@@ -26,8 +26,16 @@ Superuser created successfully.
 ```
 Now you have created an admin user, you’re ready to use the Django admin. Let’s start the development server and explore.
 
-First, make sure the development server is running, then open a web browser to http://127.0.0.1:8000/admin/. Log in with the superuser account you created. At the top of the index page is the Authentication and Authorization group with two types of editable content: Groups and Users. They are provided by the authentication framework included in Django. We will look at users and groups later in the chapter.
+First, make sure the development server is running, then open a web browser to http://127.0.0.1:8000/admin/. Log in with the superuser account you created. At the top of the index page is the Authentication and Authorization group with two types of editable content: Groups and Users. They are provided by the authentication framework included in Django. 
 
+## Models
+A model is the single, definitive source of information about your data. It contains the essential fields and behaviors of the data you’re storing. It is a class that represents table or collection in our DB, and where every attribute of the class is a field of the table or collection.  In short, Django Models is the SQL of Database one uses with Django. SQL (Structured Query Language) is complex and involves a lot of different queries for creating, deleting, updating or any other stuff related to database. Django models simplify the tasks and organize tables into models. Models are defined in the app/models.py
 
+The basics:
 
-# Not Completed even now
+* Each model is a Python class that subclasses **django.db.models.Model**.
+* Each attribute of the model represents a database field.
+* With all of this, Django gives you an automatically-generated database-access API
+
+## Quick example 
+
