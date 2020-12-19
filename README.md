@@ -54,15 +54,15 @@ def customer(request, pk_task):
 **customer.html**
 ```
 {% for order in orders %}
+
+	<tr>
+		<td>{{order.product}}</td>
+		<td>{{order.product.category}}</td>
+		<td>{{order.date_created}}</td>
+		<td>{{order.status}}</td>
+		<td><a class="btn btn-sm btn-info" href="">Update</a> </td>
+		<td><a class="btn btn-sm btn-danger" href="">Remove</a> </td>
+	</tr>
 				
-					<tr>
-						<td>{{order.product}}</td>
-						<td>{{order.product.category}}</td>
-						<td>{{order.date_created}}</td>
-						<td>{{order.status}}</td>
-						<td><a class="btn btn-sm btn-info" href="">Update</a> </td>
-						<td><a class="btn btn-sm btn-danger" href="">Remove</a> </td>
-					</tr>
-				
-				{% endfor %}
+{% endfor %}
 ```
