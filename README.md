@@ -1,7 +1,7 @@
 # DjangoProject
 ## Day-8
 
-## Database Queries
+## Example for database queries
 
 (1) Returns all customers from customer table
 ```
