@@ -33,3 +33,36 @@ The following path converters are available by default:
 * **uuid** - Matches a formatted UUID. To prevent multiple URLs from mapping to the same page, dashes must be included and letters must be lowercase. For example, **075194d3-6885-417e-a8a8-6c931e272f00**. Returns a **UUID** instance.
 * **path** - Matches any non-empty string, including the path separator, **'/'**. This allows you to match against a complete URL path rather than a segment of a URL path as with **str**.
 
+To view the customer's order details in our project, we use dynamic URL. **str** is used as a path converter in the `urls.py` and it is passed as a parameter in the `customer` function and perform database queries to retrieve the values and display it in the form of a table in customer page.
+**urls.py**
+```
+urlpatterns = [
+    path('', views.home, name='home'),
+    path('products/', views.products, name='products'),
+    path('customer/<str:pk_task>/', views.customer, name='customer'),
+]
+```
+**views.py**
+```
+def customer(request, pk_task):
+	customer = Customer.objects.get(id=pk_task)
+	orders = customer.order_set.all()
+	order_count = orders.count()
+	context = {'customer':customer,'orders':orders, 'order_count':order_count}
+	return render(request,'accounts/customer.html',context)
+```
+**customer.html**
+```
+{% for order in orders %}
+				
+					<tr>
+						<td>{{order.product}}</td>
+						<td>{{order.product.category}}</td>
+						<td>{{order.date_created}}</td>
+						<td>{{order.status}}</td>
+						<td><a class="btn btn-sm btn-info" href="">Update</a> </td>
+						<td><a class="btn btn-sm btn-danger" href="">Remove</a> </td>
+					</tr>
+				
+				{% endfor %}
+```
