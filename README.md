@@ -73,7 +73,7 @@ The CSRF middleware and template tag provides easy-to-use protection against Cro
 ## How to use it
 To take advantage of CSRF protection in your views, follow these steps:
 
-1. The CSRF middleware is activated by default in the **MIDDLEWARE setting**. If you override that setting, remember that **'django.middleware.csrf.CsrfViewMiddleware'** should come before any view middleware that assume that CSRF attacks have been dealt with.
+1. The CSRF middleware is activated by default in the **MIDDLEWARE** setting. If you override that setting, remember that **'django.middleware.csrf.CsrfViewMiddleware'** should come before any view middleware that assume that CSRF attacks have been dealt with.
 
   If you disabled it, which is not recommended, you can use **csrf_protect()** on particular views you want to protect (see below).
 
